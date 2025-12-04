@@ -1,10 +1,19 @@
-Jeecg AI应用平台介绍
+Jeecg AI应用平台
 ===============
 
+当前最新版本： 1.0.0（发布日期：2025-12-05） 
+
+
+[![AUR](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/jeecgboot/JeecgBoot/blob/master/LICENSE)
+[![](https://img.shields.io/badge/Author-北京国炬软件-orange.svg)](https://jeecg.com)
+[![](https://img.shields.io/badge/blog-技术博客-orange.svg)](https://jeecg.blog.csdn.net)
+[![](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/jeecgboot/jeecg-ai)
+[![GitHub stars](https://img.shields.io/github/stars/jeecgboot/jeecg-ai.svg?style=social&label=Stars)](https://github.com/jeecgboot/jeecg-ai)
+[![GitHub forks](https://img.shields.io/github/forks/jeecgboot/jeecg-ai.svg?style=social&label=Fork)](https://github.com/jeecgboot/jeecg-ai)
+
+
+
 一个全栈式 AI 开发平台，旨在帮助开发者快速构建和部署个性化的 AI 应用。
-
-> JDK说明：AI流程编排引擎暂时不支持jdk21，所以目前只能使用jdk8或者jdk17启动项目。
-
 
 JeecgBoot平台的AIGC功能模块，是一套类似`Dify`的`AIGC应用开发平台`+`知识库问答`，是一款基于LLM大语言模型AI应用平台和 RAG 的知识库问答系统。
 其直观的界面结合了 AI 流程编排、RAG 管道、知识库管理、模型管理、对接向量库、实时运行可观察等，让您可以快速从原型到生产，拥有AI服务能力。
@@ -125,6 +134,39 @@ AIGC模块是一个基于AI的自动化流程编排工具和聊天应用搭建�
 - 你可能需要一个聊天机器人，可以通过AI流程编排搭建出来。
 - 你可能需要一个自动化流程，可以通过AI流程编排搭建出来。
 - 你可能需要一个自动化处理文件的流程，可以通过AI流程结合python脚本实现操作电脑，文件等。
+
+
+技术架构：
+-----------------------------------
+
+#### 前端
+
+- 前端环境要求：Node.js要求`Node 20+` 版本以上、pnpm 要求`9+` 版本以上
+
+ ` ( Vite 不再支持已结束生命周期（EOL）的 Node.js 18。现在需要使用 Node.js 20.19+ 或 22.12+)`
+
+- 依赖管理：node、npm、pnpm
+- 前端IDE建议：IDEA、WebStorm、Vscode
+- 采用 Vue3.0+TypeScript+Vite6+Ant-Design-Vue4等新技术方案，包括二次封装组件、utils、hooks、动态菜单、权限校验、按钮级别权限控制等功能
+- 最新技术栈：Vue3.0 + TypeScript + Vite6 + ant-design-vue4 + pinia + echarts + unocss + vxe-table + qiankun + es6
+
+#### 后端
+
+- IDE建议： IDEA (必须安装lombok插件 )
+- 语言：Java 默认jdk17(jdk21、jdk24)
+- 依赖管理：Maven
+- 基础框架：Spring Boot 3.5.5
+- 微服务框架： Spring Cloud Alibaba 2023.0.3.3
+- 持久层框架：MybatisPlus 3.5.12
+- 报表工具： JimuReport 2.1.3
+- 安全框架：Apache Shiro 2.0.4，Jwt 4.5.0
+- 微服务技术栈：Spring Cloud Alibaba、Nacos、Gateway、Sentinel、Skywalking
+- 数据库连接池：阿里巴巴Druid 1.2.24
+- AI大模型：支持 `ChatGPT` `DeepSeek` `千问`等各种常规模式
+- 日志打印：logback
+- 缓存：Redis
+- 其他：autopoi, fastjson，poi，Swagger-ui，quartz, lombok（简化代码）等。
+- 默认提供MySQL5.7+数据库脚本
 
 
 ## AI应用平台功能展示
