@@ -18,12 +18,35 @@ Jeecg AI应用平台
 Jeecg-AI 是一套类似`Dify`的`AIGC应用开发平台`+`知识库问答`，是一款基于大型语言模型和RAG技术的AI应用平台，重点提供图文并茂的AI知识库和智能聊天功能，界面直观，支持知识库管理、AI流程编排、模型配置、向量库对接及实时运行监控，帮助用户将知识转化为智能AI知识库，轻松实现精准智能问答。
 
 
-### AI视频介绍
+AI视频介绍
+-----------------------------------
 
 [![](https://jeecgos.oss-cn-beijing.aliyuncs.com/files/jeecg_aivideo.png)](https://www.bilibili.com/video/BV1zmd7YFE4w)
 
 
-##### 功能大模块
+
+启动项目
+-----------------------------------
+
+> 默认账号密码： admin/123456
+
+- [开发环境搭建](https://help.jeecg.com/java/setup/tools)
+- [IDEA启动前后端](https://help.jeecg.com/java/setup/idea/startup)
+- [Docker一键启动](https://help.jeecg.com/java/docker/quick)
+
+
+技术文档
+-----------------------------------
+
+- [AIGC开发文档](https://help.jeecg.com/aigc)
+- [安装向量库 pgvector](https://help.jeecg.com/aigc/config)
+- QQ交流群：  1044827970
+- 在线演示：  https://boot3.jeecg.com
+
+
+
+功能大模块
+-----------------------------------
 
 - AI应用开发平台
 - AI知识库系统
@@ -37,8 +60,8 @@ Jeecg-AI 是一套类似`Dify`的`AIGC应用开发平台`+`知识库问答`，�
 
 
 
-#### Dify `VS` JEECG AI
-
+Dify `VS` JEECG AI
+-----------------------------------
 > JEECG AI与Dify相比，在多个方面展现出显著的优势，特别是在文档处理、格式和图片保持方面。以下是一些具体的优点：
 > - Markdown文档库导入：
 > JEECG AI允许用户直接导入整个Markdown文档库，这不仅保留markdown格式，还支持图片的导入，确保文档内容的完整性和可视化效果。
@@ -64,12 +87,6 @@ Jeecg-AI 是一套类似`Dify`的`AIGC应用开发平台`+`知识库问答`，�
 
 
 
-### 技术文档
-
-- [AIGC开发文档](https://help.jeecg.com/aigc)
-- [安装向量库 pgvector](https://help.jeecg.com/aigc/config)
-
-
 
 ## 功能特点
 
@@ -84,16 +101,6 @@ Jeecg-AI 是一套类似`Dify`的`AIGC应用开发平台`+`知识库问答`，�
 
 
 
-#### 在线体验
-
-- JeecgBoot演示：  https://boot3.jeecg.com
-- 敲敲云在线搭建AI知识库：https://app.qiaoqiaoyun.com
-
-
-## 技术交流
-
-- 开发文档：https://help.jeecg.com/aigc 
-- QQ群：964611995、716488839(满)
 
 
 ## 功能列表
