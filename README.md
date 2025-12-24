@@ -1,238 +1,344 @@
-Jeecg AI应用平台
+# Jeecg AI Platform
 ===============
 
-当前最新版本： 1.0.0（发布日期：2025-12-05） 
+Current Version: 1.0.0 (Release Date: 2025-12-05)
 
-
-[![AUR](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/jeecgboot/JeecgBoot/blob/master/LICENSE)
-[![](https://img.shields.io/badge/Author-北京国炬软件-orange.svg)](https://jeecg.com)
-[![](https://img.shields.io/badge/blog-技术博客-orange.svg)](https://jeecg.blog.csdn.net)
-[![](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/jeecgboot/jeecg-ai)
+[![License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/jeecgboot/JeecgBoot/blob/master/LICENSE)
+[![Author](https://img.shields.io/badge/Author-GUOJU%20Software-orange.svg)](https://jeecg.com)
+[![Blog](https://img.shields.io/badge/blog-Tech%20Blog-orange.svg)](https://jeecg.blog.csdn.net)
+[![Version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/jeecgboot/jeecg-ai)
 [![GitHub stars](https://img.shields.io/github/stars/jeecgboot/jeecg-ai.svg?style=social&label=Stars)](https://github.com/jeecgboot/jeecg-ai)
 [![GitHub forks](https://img.shields.io/github/forks/jeecgboot/jeecg-ai.svg?style=social&label=Fork)](https://github.com/jeecgboot/jeecg-ai)
 
+## 📖 Introduction
+
+A full-stack AI development platform designed to help developers quickly build and deploy personalized AI applications.
+
+Jeecg-AI is an **AIGC Application Development Platform** similar to `Dify`, featuring **Knowledge Base Q&A** capabilities. Built on Large Language Models (LLM) and RAG (Retrieval-Augmented Generation) technology, this AI application platform focuses on providing illustrated AI knowledge bases and intelligent chat functionality. With an intuitive interface, it supports knowledge base management, AI workflow orchestration, model configuration, vector database integration, and real-time monitoring, helping users transform knowledge into intelligent AI knowledge bases for precise and intelligent Q&A.
+
+## 🎥 Video Introduction
+
+[![AI Video Introduction](https://jeecgos.oss-cn-beijing.aliyuncs.com/files/jeecg_aivideo.png)](https://www.bilibili.com/video/BV1zmd7YFE4w)
+
+## ✨ Key Features
+
+- 🤖 **AIGC Application Development Platform** - Build AI applications with ease
+- 📚 **Knowledge Base Management** - Create and manage intelligent knowledge bases
+- 🔄 **AI Workflow Orchestration** - Design complex AI workflows visually
+- 🎯 **Model Configuration** - Flexible integration with various LLM models
+- 💾 **Vector Database Integration** - Support for pgvector and other vector stores
+- 📊 **Real-time Monitoring** - Track and monitor AI application performance
+- 💬 **Intelligent Chat** - Advanced conversational AI capabilities
+- 🎨 **Intuitive UI** - User-friendly interface with rich visual elements
 
+## 🛠️ Tech Stack
+
+### Backend
+- **Java 17+** - Core programming language
+- **Spring Boot 3.5.5** - Application framework
+- **Spring Cloud 2025.0.0** - Microservices framework
+- **Spring Cloud Alibaba 2023.0.3.3** - Cloud native components
+- **Maven 3.6+** - Dependency management
+- **MySQL 8.0** - Primary database
+- **PostgreSQL (pgvector)** - Vector database for AI embeddings
+- **Redis 5.0** - Caching layer
 
-一个全栈式 AI 开发平台，旨在帮助开发者快速构建和部署个性化的 AI 应用。
+### Frontend
+- **Vue 3** - Progressive JavaScript framework
+- **TypeScript** - Type-safe development
+- **Vite** - Next generation frontend tooling
+- **Ant Design Vue 4.2.6** - Enterprise UI components
+- **LogicFlow 2.0** - Workflow visualization
+- **ECharts 5.6** - Data visualization
+- **Axios** - HTTP client
 
-Jeecg-AI 是一套类似`Dify`的`AIGC应用开发平台`+`知识库问答`，是一款基于大型语言模型和RAG技术的AI应用平台，重点提供图文并茂的AI知识库和智能聊天功能，界面直观，支持知识库管理、AI流程编排、模型配置、向量库对接及实时运行监控，帮助用户将知识转化为智能AI知识库，轻松实现精准智能问答。
+### AI & ML
+- **RAG (Retrieval-Augmented Generation)** - Enhanced AI responses
+- **Vector Embeddings** - Semantic search capabilities
+- **LLM Integration** - Support for multiple language models
 
+## 📋 Prerequisites
 
-AI视频介绍
------------------------------------
+Before you begin, ensure you have the following installed:
 
-[![](https://jeecgos.oss-cn-beijing.aliyuncs.com/files/jeecg_aivideo.png)](https://www.bilibili.com/video/BV1zmd7YFE4w)
+- **Java**: JDK 17, 21, or 24
+- **Maven**: Version 3.6 or higher
+- **Node.js**: Version 14 or higher
+- **pnpm**: Package manager
+- **Docker & Docker Compose**: For containerized deployment (optional)
+- **MySQL**: Version 8.0 or higher
+- **PostgreSQL with pgvector**: For vector storage
+- **Redis**: Version 5.0 or higher
 
+## 🚀 Quick Start
+
+### Default Credentials
+```
+Username: admin
+Password: 123456
+```
+
+### Method 1: Docker Compose (Recommended)
+
+#### Windows
+```bash
+start-docker-compose.bat
+```
+
+#### Linux/Mac
+```bash
+chmod +x start-docker-compose.sh
+./start-docker-compose.sh
+```
+
+### Method 2: Manual Setup
+
+#### 1. Clone the Repository
+```bash
+git clone https://github.com/jeecgboot/jeecg-ai.git
+cd jeecg-ai
+```
+
+#### 2. Database Setup
+
+**MySQL Setup:**
+```bash
+# Import the database schema
+mysql -u root -p < jeecg-boot/db/jeecgai-mysql-5.7.sql
+```
+
+**PostgreSQL with pgvector Setup:**
+```bash
+# Install pgvector extension
+# See documentation: https://help.jeecg.com/aigc/config
+```
+
+#### 3. Backend Setup
+
+```bash
+cd jeecg-boot
+
+# Install dependencies
+mvn clean install
+
+# Run the application
+cd jeecg-module-system/jeecg-system-start
+mvn spring-boot:run
+```
+
+The backend server will start at: `http://localhost:8080`
+
+#### 4. Frontend Setup
+
+```bash
+cd jeecgboot-vue3
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+```
+
+The frontend application will start at: `http://localhost:5173`
+
+## 🐳 Docker Deployment
+
+The project includes Docker configuration for easy deployment:
+
+```yaml
+# Services included:
+- MySQL 8.0 (Port: 13306)
+- Redis 5.0
+- PostgreSQL with pgvector (Port: 5432)
+- Jeecg Boot System
+- Jeecg Vue3 Frontend
+```
+
+**Start all services:**
+```bash
+docker-compose up -d
+```
+
+**Stop all services:**
+```bash
+docker-compose down
+```
+
+## 📁 Project Structure
+
+```
+jeecg-ai/
+├── jeecg-boot/                      # Backend application
+│   ├── jeecg-boot-base-core/        # Core modules
+│   ├── jeecg-boot-module/           # Business modules
+│   │   └── jeecg-boot-module-airag/ # AI RAG module
+│   ├── jeecg-module-system/         # System module
+│   │   ├── jeecg-system-api/        # API layer
+│   │   ├── jeecg-system-biz/        # Business logic
+│   │   └── jeecg-system-start/      # Application entry
+│   ├── db/                          # Database scripts
+│   └── pom.xml                      # Maven configuration
+│
+├── jeecgboot-vue3/                  # Frontend application
+│   ├── src/
+│   │   ├── api/                     # API services
+│   │   ├── components/              # Reusable components
+│   │   ├── views/                   # Page views
+│   │   ├── router/                  # Route configuration
+│   │   ├── store/                   # State management
+│   │   └── utils/                   # Utility functions
+│   ├── build/                       # Build scripts
+│   ├── public/                      # Static assets
+│   └── package.json                 # NPM dependencies
+│
+├── docker-compose.yml               # Docker orchestration
+└── README.md                        # Chinese documentation
+```
+
+## 🔧 Configuration
+
+### Backend Configuration
+
+Edit `jeecg-boot/jeecg-module-system/jeecg-system-start/src/main/resources/application.yml`:
+
+```yaml
+# Database configuration
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jeecgai?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: root
+
+# Redis configuration
+  redis:
+    host: localhost
+    port: 6379
+    
+# Vector database (PostgreSQL with pgvector)
+  vector:
+    datasource:
+      url: jdbc:postgresql://localhost:5432/vector_db
+      username: postgres
+      password: postgres
+```
+
+### Frontend Configuration
+
+Edit `jeecgboot-vue3/.env.development`:
+
+```bash
+# API base URL
+VITE_GLOB_API_URL=/jeecgboot
+
+# Backend server
+VITE_PROXY_TARGET=http://localhost:8080
+```
+
+## 📚 Documentation
+
+- **Official Documentation**: [https://help.jeecg.com/aigc](https://help.jeecg.com/aigc)
+- **Development Environment Setup**: [https://help.jeecg.com/java/setup/tools](https://help.jeecg.com/java/setup/tools)
+- **IDEA Startup Guide**: [https://help.jeecg.com/java/setup/idea/startup](https://help.jeecg.com/java/setup/idea/startup)
+- **Docker Quick Start**: [https://help.jeecg.com/java/docker/quick](https://help.jeecg.com/java/docker/quick)
+- **pgvector Installation**: [https://help.jeecg.com/aigc/config](https://help.jeecg.com/aigc/config)
 
+## 🎯 Core Modules
 
-启动项目
------------------------------------
+### 1. AI Application Development
+Build custom AI applications with drag-and-drop workflow designer.
 
-> 默认账号密码： admin/123456
+### 2. Knowledge Base Management
+Create, manage, and query intelligent knowledge bases with vector search.
 
-- [开发环境搭建](https://help.jeecg.com/java/setup/tools)
-- [IDEA启动前后端](https://help.jeecg.com/java/setup/idea/startup)
-- [Docker一键启动](https://help.jeecg.com/java/docker/quick)
+### 3. RAG Implementation
+Leverage Retrieval-Augmented Generation for accurate, context-aware responses.
 
+### 4. Model Integration
+Integrate various LLM models including OpenAI, Claude, and custom models.
 
-技术文档
------------------------------------
+### 5. Workflow Orchestration
+Design complex AI workflows with visual tools powered by LogicFlow.
 
-- [AIGC开发文档](https://help.jeecg.com/aigc)
-- [安装向量库 pgvector](https://help.jeecg.com/aigc/config)
-- QQ交流群：  1044827970
-- 在线演示：  https://boot3.jeecg.com
-- 视频教程： https://www.bilibili.com/video/BV1zmd7YFE4w
+## 🏗️ Building for Production
 
+### Backend
+```bash
+cd jeecg-boot
+mvn clean package
+```
+The JAR file will be generated in `jeecg-module-system/jeecg-system-start/target/`
 
-功能大模块
------------------------------------
+### Frontend
+```bash
+cd jeecgboot-vue3
+pnpm build
+```
+The production files will be generated in `dist/`
 
-- AI应用开发平台
-- AI知识库系统
-- AI大模型管理
-- AI流程编排
-- AI对话支持图片
-- AI对话助手(智能问答)
-- AI建表（Online表单）
-- AI写文章（CMS）
-- AI表单字段建议（表单设计器）
+### Docker Build
+```bash
+# Build backend
+docker build -t jeecg-boot:latest ./jeecg-boot/jeecg-module-system/jeecg-system-start
 
+# Build frontend
+docker build -t jeecgboot-vue3:latest ./jeecgboot-vue3
+```
 
+## 🧪 Testing
 
-Dify `VS` JEECG AI
------------------------------------
-> JEECG AI与Dify相比，在多个方面展现出显著的优势，特别是在文档处理、格式和图片保持方面。以下是一些具体的优点：
-> - Markdown文档库导入：
-> JEECG AI允许用户直接导入整个Markdown文档库，这不仅保留markdown格式，还支持图片的导入，确保文档内容的完整性和可视化效果。
-> - 对话回复格式美观：
-> 在对话过程中，JEECG AI能够保持回复内容的原格式，也不丢失图片，使得输出的文章更加美观，不会出现格式错乱的情况，还支持图片的渲染。
-> - PDF文档导入与格式转换：
-> JEECG AI在处理PDF文档时，能够更好地保持原始格式和图片，确保转换后的内容与原始文档一致。这个功能在许多AI产品中表现不佳，而JEECG AI在这方面做出了显著的优化
+### Backend Tests
+```bash
+cd jeecg-boot
+mvn test
+```
 
+### Frontend Tests
+```bash
+cd jeecgboot-vue3
+pnpm test
+```
 
-| 功能         | Dify             | Jeecg AI                                |
-|------------|------------------|-----------------------------------------|
-| AI工作流      | 有                | 有                                       |
-| RAG 管道向量搜索 | 有                | 有                                       |
-| AI模型管理     | 有                | 有                                       |
-| AI应用管理     | 有                | 有                                       |
-| AI知识库      | 有                | 有                                       |
-| 产品方向       | 一款独立的 LLM 应用开发平台 | 低代码与AIGC应用二者结合的平台                       |
-| 业务集成       | 业务集成能力弱          | 更方便与业务系统集成，调用系统接口和逻辑更加方便                |
-| AI业务流      | 侧重AI逻辑流程         | AI流程编排作为低代码的业务引擎，用户可以通过AI流程配置各种业务流和AI流程 |
-| 实现语言       | python + react | JAVA + vue3                             |
-| 上传markdown文档库(支持图片) | 不支持 | 支持 |
-| AI对话支持发图和展示图片 | 支持 | 支持 |
+## 📱 Demo & Support
 
+- **Online Demo**: [https://boot3.jeecg.com](https://boot3.jeecg.com)
+- **Video Tutorials**: [https://www.bilibili.com/video/BV1zmd7YFE4w](https://www.bilibili.com/video/BV1zmd7YFE4w)
+- **QQ Group**: 1044827970
+- **Official Website**: [https://jeecg.com](https://jeecg.com)
+- **Technical Blog**: [https://jeecg.blog.csdn.net](https://jeecg.blog.csdn.net)
 
+## 🤝 Contributing
 
+We welcome contributions! Please follow these steps:
 
-## 功能特点
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-- AI流程: 提供强大的AI流程设计器引擎，支持编排 AI 工作过程，满足复杂业务场景，支持画布上构建和实时运行查看 AI流程运行情况。
-- AI流程即服务: 通过AI流程编排你需要的智能体，结合AI+自定义开发节点 实现功能性 API，让你瞬间拥有各种智能体API。
-- AI助手对话功能: 集成 ChatGPT、Deepseek、智普、私有大模型 等 AI 模型，提供智能对话和生成式 AI 功能，深度与知识库结合提供更精准的知识。
-- RAG 功能: 涵盖从文档摄入到检索的所有内容，支持从 PDF、PPT 和其他常见文档格式中提取文本，支持检索增强生成（RAG），将未训练数据与 AI 模型集成，提升智能交互能力。
-- AI 知识库: 通过导入文档或已有问答对进行训练，让 AI 模型能根据文档以交互式对话方式回答问题。
-- 模型管理：支持对接各种大模型，包括本地私有大模型（Deepseek/ Llama 3 / Qwen 2 等）、国内公共大模型（通义千问 / 腾讯混元 / 字节豆包 / 百度千帆 / 智谱 AI / Kimi 等）和国外公共大模型（OpenAI / Claude / Gemini 等）；
-- 无缝嵌入：Iframe一键嵌入,支持将AI聊天助手快速嵌入到第三方系统，让系统快速拥有智能问答能力，提高用户满意度。
+## 📄 License
 
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
 
+## 👥 Authors
 
+**Beijing GUOJU Information Technology Co., Ltd.**
+- Email: jeecgos@163.com
+- Website: [http://www.guojusoft.com](http://www.guojusoft.com)
 
+## 🙏 Acknowledgments
 
+Special thanks to all contributors and the open-source community for their support.
 
-## 功能列表
+## 📞 Contact
 
-- AI应用管理(普通应用、高级流程应用)
-- AI模型管理
-- AI知识库
-- AI应用平台(普通、对接AI流程)
-- AI流程编排
-- AI聊天支持嵌入第三方
-- AI向量库对接
+For business inquiries or technical support:
+- Email: jeecgos@163.com
+- Website: [https://jeecg.com](https://jeecg.com)
+- GitHub: [https://github.com/jeecgboot/jeecg-ai](https://github.com/jeecgboot/jeecg-ai)
 
+---
 
+⭐ **Star us on GitHub** if you find this project helpful!
 
-## 支持AI模型
-
-| AI大模型         |  支持   |
-|---------------| --- |
-| DeepSeek      |  √   |
-| ChatGTP       |  √   |
-| Qwq           |  √   |
-| 智库            |  √   |
-| claude        |  √   |
-| vl模型          |  √   |
-| 千帆大模型         |  √   |
-| 通义千问          |  √   |
-| Ollama本地搭建大模型 |  √   |
-| 等等。。          |  √   |
-
-
-
-
-##  AIGC能做什么
-
-AIGC模块是一个基于AI的自动化流程编排工具和聊天应用搭建平台，它可以帮助用户快速生成AI流程接口和聊天应用，提高效率。
-以下是一些具体的应用场景和示例：
-
-- 你可能需要一个翻译接口，可以通过AI流程编排搭建出来。
-- 你可能需要一个接口转换工具，可以通过AI流程编排搭建出来。（比如：jimureport所需要接口返回格式与你的系统不同，你通过AI接口实现自动转换）
-- 你可能需要一个聊天机器人，可以通过AI流程编排搭建出来。
-- 你可能需要一个自动化流程，可以通过AI流程编排搭建出来。
-- 你可能需要一个自动化处理文件的流程，可以通过AI流程结合python脚本实现操作电脑，文件等。
-
-
-技术架构：
------------------------------------
-#### AI底层
-
-- [langchain4j](https://docs.langchain4j.info)
-- [jeecg-boot-starter-chatgpt](https://github.com/jeecgboot/jeecg-boot-starter/tree/springboot3/jeecg-boot-starter-chatgpt)
-
-
-#### 前端
-
-- 前端环境要求：Node.js要求`Node 20+` 版本以上、pnpm 要求`9+` 版本以上
-
- ` ( Vite 不再支持已结束生命周期（EOL）的 Node.js 18。现在需要使用 Node.js 20.19+ 或 22.12+)`
-
-- 依赖管理：node、npm、pnpm
-- 前端IDE建议：IDEA、WebStorm、Vscode
-- 采用 Vue3.0+TypeScript+Vite6+Ant-Design-Vue4等新技术方案，包括二次封装组件、utils、hooks、动态菜单、权限校验、按钮级别权限控制等功能
-- 最新技术栈：Vue3.0 + TypeScript + Vite6 + ant-design-vue4 + pinia + echarts + unocss + vxe-table + qiankun + es6
-
-#### 后端
-
-- IDE建议： IDEA (必须安装lombok插件 )
-- 语言：Java 默认jdk17(jdk21、jdk24)
-- 依赖管理：Maven
-- 基础框架：Spring Boot 3.5.5
-- 微服务框架： Spring Cloud Alibaba 2023.0.3.3
-- 持久层框架：MybatisPlus 3.5.12
-- 报表工具： JimuReport 2.1.3
-- 安全框架：Apache Shiro 2.0.4，Jwt 4.5.0
-- 微服务技术栈：Spring Cloud Alibaba、Nacos、Gateway、Sentinel、Skywalking
-- 数据库连接池：阿里巴巴Druid 1.2.24
-- AI大模型：支持 `ChatGPT` `DeepSeek` `千问`等各种常规模式
-- 日志打印：logback
-- 缓存：Redis
-- 其他：autopoi, fastjson，poi，Swagger-ui，quartz, lombok（简化代码）等。
-- 默认提供MySQL5.7+数据库脚本
-
-
-## 界面效果
-
-AI聊天
-
-![](https://oscimg.oschina.net/oscnet/up-979b78f4521ed0c9711e4277f15d23bc0de.png)
-
-
-AI模型列表
-
-![](https://oscimg.oschina.net/oscnet//a5fb3e0d69ca1706b0de221535c7acaa.png)
-
-选择AI模型，配置你的参数
-
-![](https://oscimg.oschina.net/oscnet//1f941472758a5fc227f54f2683953b8e.png)
-
-
-AI知识库支持手工录入文本，导入pdf\\word\\excel等文档，支持问答对训练
-
-![](https://oscimg.oschina.net/oscnet//150bb33f48d6c8e2ae059e2a58f4200b.png)
-
-![](https://oscimg.oschina.net/oscnet//032d16c915b0f79318935484c81df260.png)
-
-
-
-AI流程，提供强大的AI流程设计器引擎，支持编排 AI 工作过程，满足复杂业务场景，支持画布上构建和实时运行查看 AI流程运行情况。
-
-![](https://oscimg.oschina.net/oscnet//f40f9aa275cd4aea94e1c209513151e2.png)
-
-
-目前支持的节点有：开始、结束、AI知识库节点、AI节点、分类节点、分支节点、JAVA节点、脚本节点、子流程节点、http请求节点、直接回复节点等节点
-
-![](https://oscimg.oschina.net/oscnet//6d86480ab1bbfab5b2e6992b416b2152.png)
-
-节点项配置
-
-![](https://oscimg.oschina.net/oscnet//90a5f76b6b4fc406e2e2b87245b35459.png)
-
-在线运行看结果
-
-![](https://oscimg.oschina.net/oscnet//bc9817a7bbd94936a5a3e885abe3cb38.png)
-
-
-AI应用配置，支持AI流程配置和简单的AI配置
-
-![](https://oscimg.oschina.net/oscnet//a853d9be4d3756806799ad025e722df8.png)![](https://oscimg.oschina.net/oscnet//d3bcbf5977c6fb75a8f996e1e40590be.png)
-
-可以关联多个知识库，右侧是AI智能回复，你可以搭建自己的智能体，比如搭建一个 “诗词达人” “翻译助手”
-
-![](https://oscimg.oschina.net/oscnet//c26a848136be3e22ec1e0651e78976c2.png)
-
-可以将创建的聊天应用，集成到第三方系统中
-
-![](https://oscimg.oschina.net/oscnet//39c6f589ef46f0454b229915ffa263f4.png)
