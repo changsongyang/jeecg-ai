@@ -306,7 +306,7 @@ pnpm test
 
 - **Online Demo**: [https://boot3.jeecg.com](https://boot3.jeecg.com)
 - **Video Tutorials**: [https://www.bilibili.com/video/BV1zmd7YFE4w](https://www.bilibili.com/video/BV1zmd7YFE4w)
-- **QQ Group**: 1044827970
+- **QQ Group**: 964611995
 - **Official Website**: [https://jeecg.com](https://jeecg.com)
 - **Technical Blog**: [https://jeecg.blog.csdn.net](https://jeecg.blog.csdn.net)
 
