@@ -1,7 +1,7 @@
 English | [中文](./README.zh-CN.md)
 
 
-# Jeecg AI Platform
+# Jeecg AI Platform+Lowcode APP
 ===============
 
 Current Version: 1.0.0 (Release Date: 2025-12-05)
@@ -15,11 +15,19 @@ Current Version: 1.0.0 (Release Date: 2025-12-05)
 
 ## 📖 Introduction
 
-A full-stack AI development platform designed to help developers quickly build and deploy personalized AI applications.
+A full-stack AI development platform designed to help developers quickly build and deploy personalized AI applications+Lowcode APP.
 
 Jeecg-AI is an **AIGC Application Development Platform** similar to `Dify`, featuring **Knowledge Base Q&A** capabilities. Built on Large Language Models (LLM) and RAG (Retrieval-Augmented Generation) technology, this AI application platform focuses on providing illustrated AI knowledge bases and intelligent chat functionality. With an intuitive interface, it supports knowledge base management, AI workflow orchestration, model configuration, vector database integration, and real-time monitoring, helping users transform knowledge into intelligent AI knowledge bases for precise and intelligent Q&A.
 
-> Industry-unique product focusing on the integration of AI application platforms with low-code solutions. Features include: AI application platform, no-code applications, AI reports, AI dashboards, AI display screens, and Chat AI reports.
+- **Product Direction**: AI application platform integrated with low-code, featuring: AI application platform, no-code applications, AI reports, AI dashboards, AI scorecards, and Chat AI reports.
+
+> This will be a unique, comprehensive AI application platform in the industry, deeply integrating AI technology with low-code development concepts. It is dedicated to creating an intelligent and automated business system development environment for enterprises and developers. The product covers a wide range of areas with rich functionalities, including AI application platforms, no-code application development, intelligent AI report generation, dynamic AI dashboard displays, interactive AI scorecards, and the innovative Chat AI reports, among other dimensions.  
+>   
+> Its core advantage lies in leveraging a powerful AI engine to enable users, without traditional programming skills, to automatically generate AI-driven application systems. This allows for the rapid development of customized systems that meet business needs, significantly improving development efficiency and business responsiveness. At the same time, the platform supports intelligent report auto-generation, integrating multi-dimensional data analysis and visualization to help enterprises gain deep insights into business dynamics and facilitate decision-making. The AI dashboard and scorecard functionalities provide real-time data monitoring and interactive experiences, visually displaying key metrics and business trends.  
+>   
+> Additionally, the Chat AI reports module innovatively combines natural language processing with report analysis, enabling users to query data, generate reports, and retrieve knowledge base information through conversational interactions. This seamlessly integrates intelligent Q&A with data insights, greatly enhancing user experience and information retrieval efficiency.  
+>   
+> In summary, this product is not only an AI application development platform but also a comprehensive solution covering intelligent development, data analysis, and knowledge management. It helps enterprises achieve digital transformation and intelligent upgrades, building the core competitiveness of future business operations.
 
 
 
